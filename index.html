@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-r from-blue-500 via-purple-600 to-indigo-500 min-h-screen flex flex-col justify-center items-center">
+  
+  <!-- Header -->
+  <header class="w-full bg-blue-600 py-4 shadow-lg">
+    <h2 class="text-center text-white text-3xl font-semibold">Tic-Tac-Toe Game</h2>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-lg mt-6">
+    
+    <!-- Game Board -->
+    <div id="game-board" class="grid grid-cols-3 gap-4 mb-6">
+      <!-- Cells for Tic-Tac-Toe -->
+      <div class="cell bg-white border-2 border-gray-300 flex items-center justify-center text-3xl font-bold cursor-pointer w-24 h-24 hover:bg-blue-100" data-cell></div>
+      <div class="cell bg-white border-2 border-gray-300 flex items-center justify-center text-3xl font-bold cursor-pointer w-24 h-24 hover:bg-blue-100" data-cell></div>
+      <div class="cell bg-white border-2 border-gray-300 flex items-center justify-center text-3xl font-bold cursor-pointer w-24 h-24 hover:bg-blue-100" data-cell></div>
+      <div class="cell bg-white border-2 border-gray-300 flex items-center justify-center text-3xl font-bold cursor-pointer w-24 h-24 hover:bg-blue-100" data-cell></div>
+      <div class="cell bg-white border-2 border-gray-300 flex items-center justify-center text-3xl font-bold cursor-pointer w-24 h-24 hover:bg-blue-100" data-cell></div>
+      <div class="cell bg-white border-2 border-gray-300 flex items-center justify-center text-3xl font-bold cursor-pointer w-24 h-24 hover:bg-blue-100" data-cell></div>
+      <div class="cell bg-white border-2 border-gray-300 flex items-center justify-center text-3xl font-bold cursor-pointer w-24 h-24 hover:bg-blue-100" data-cell></div>
+      <div class="cell bg-white border-2 border-gray-300 flex items-center justify-center text-3xl font-bold cursor-pointer w-24 h-24 hover:bg-blue-100" data-cell></div>
+      <div class="cell bg-white border-2 border-gray-300 flex items-center justify-center text-3xl font-bold cursor-pointer w-24 h-24 hover:bg-blue-100" data-cell></div>
+    </div>
+
+    <!-- Scoreboard -->
+    <div id="scoreboard" class="mb-6 flex justify-between w-64">
+        <div>
+        <h3 class="text-xl font-bold">Player X: <span id="score-x">0</span></h3>
+        </div>
+        <div>
+        <h3 class="text-xl font-bold">Player O: <span id="score-o">0</span></h3>
+        </div>
+    </div>
+
+  
+    <!-- Status Message -->
+    <h2 id="status-message" class="text-2xl text-gray-700 mb-4">Player X's Turn</h2>
+
+    <!-- Restart Button -->
+    <button id="restart-btn" class="bg-blue-500 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700">Restart Game</button>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full bg-blue-600 text-white py-2 mt-6 text-center">
+    <p>Created by Bhavya | <a href="https://github.com/bhavyapatel15" class="underline">GitHub</a></p>
+  </footer>
+
+  <!-- Modal for Game Over -->
+  <div id="game-over-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2 id="modal-message"></h2>
+      <button id="play-again-btn" class="bg-blue-500 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700">Play Again</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
